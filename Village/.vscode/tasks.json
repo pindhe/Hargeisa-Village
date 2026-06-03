@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open Village Website (port 80)",
+      "type": "shell",
+      "command": "cmd",
+      "args": ["/c", "start http://localhost/Village/"],
+      "problemMatcher": [],
+      "presentation": { "reveal": "never", "panel": "shared" }
+    }
+  ]
+}

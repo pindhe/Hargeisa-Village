@@ -1,0 +1,707 @@
+/**
+ * Hargeisa Village — Professional dark mode (class: html.dark)
+ */
+
+:root {
+    --dm-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --site-bg: #fafaf9;
+    --site-bg-muted: #f5f5f4;
+    --site-bg-elevated: #ffffff;
+    --site-bg-card: #ffffff;
+    --site-bg-accent-soft: #fdf8f3;
+    --site-border: #e7e5e4;
+    --site-border-soft: #f5f5f4;
+    --site-text: #292524;
+    --site-text-secondary: #57534e;
+    --site-text-muted: #78716c;
+    --site-heading: #451a03;
+    --site-heading-display: #5c2a0c;
+    --site-link: #78350f;
+    --site-link-hover: #e85d04;
+    --site-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --site-shadow-md: 0 12px 28px rgba(0, 0, 0, 0.08);
+    --site-input-bg: #ffffff;
+    --site-input-border: #d6d3d1;
+}
+
+html.dark {
+    color-scheme: dark;
+    --site-bg: #09090b;
+    --site-bg-muted: #0f0f12;
+    --site-bg-elevated: #141418;
+    --site-bg-card: #18181c;
+    --site-bg-accent-soft: #1f1a14;
+    --site-border: rgba(255, 255, 255, 0.09);
+    --site-border-soft: rgba(255, 255, 255, 0.06);
+    --site-text: #f4f4f5;
+    --site-text-secondary: #d4d4d8;
+    --site-text-muted: #a1a1aa;
+    --site-heading: #fef3c7;
+    --site-heading-display: #fde68a;
+    --site-link: #fdba74;
+    --site-link-hover: #fb923c;
+    --site-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+    --site-shadow-md: 0 16px 40px rgba(0, 0, 0, 0.45);
+    --site-input-bg: #1c1c21;
+    --site-input-border: rgba(255, 255, 255, 0.12);
+}
+
+html.dark body {
+    background-color: var(--site-bg);
+    color: var(--site-text);
+}
+
+html.dark .home-page {
+    background: #050506;
+}
+
+/* Smooth theme transition */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+    transition:
+        background-color var(--dm-transition),
+        border-color var(--dm-transition),
+        color var(--dm-transition),
+        box-shadow var(--dm-transition) !important;
+}
+
+/* Sections */
+html.dark .site-section {
+    background-color: var(--site-bg-muted);
+}
+
+html.dark .site-section--elevated {
+    background-color: var(--site-bg-elevated);
+    border-color: var(--site-border-soft);
+}
+
+html.dark .site-section--default {
+    background-color: var(--site-bg);
+}
+
+html.dark .site-card {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+    box-shadow: var(--site-shadow-sm);
+}
+
+html.dark .site-card:hover {
+    box-shadow: var(--site-shadow-md);
+    border-color: rgba(249, 115, 22, 0.25);
+}
+
+html.dark .site-card--soft {
+    background: var(--site-bg-accent-soft);
+    border-color: rgba(251, 146, 60, 0.15);
+}
+
+html.dark .site-panel-hours {
+    background: var(--site-bg-accent-soft);
+    border-color: rgba(251, 146, 60, 0.12);
+}
+
+/* Tailwind utility overrides */
+html.dark .bg-stone-50,
+html.dark section.bg-stone-50 {
+    background-color: var(--site-bg-muted) !important;
+}
+
+html.dark .bg-white {
+    background-color: var(--site-bg-elevated) !important;
+}
+
+html.dark .bg-stone-100 {
+    background-color: #27272a !important;
+}
+
+html.dark .bg-stone-200 {
+    background-color: #3f3f46 !important;
+}
+
+html.dark .bg-brand-50 {
+    background-color: var(--site-bg-accent-soft) !important;
+}
+
+html.dark .border-stone-100,
+html.dark .border-brand-100,
+html.dark .border-stone-200 {
+    border-color: var(--site-border) !important;
+}
+
+html.dark .text-stone-500,
+html.dark .text-stone-600 {
+    color: var(--site-text-muted) !important;
+}
+
+html.dark .text-stone-700,
+html.dark .text-stone-800 {
+    color: var(--site-text-secondary) !important;
+}
+
+html.dark .text-brand-800,
+html.dark .text-brand-900,
+html.dark .font-display.text-brand-800,
+html.dark h1.text-brand-800,
+html.dark h2.text-brand-800,
+html.dark h3.text-brand-900 {
+    color: var(--site-heading-display) !important;
+}
+
+html.dark .text-brand-700,
+html.dark .text-brand-600 {
+    color: var(--site-link) !important;
+}
+
+html.dark a.text-brand-700:hover,
+html.dark .hover\:underline:hover {
+    color: var(--site-link-hover) !important;
+}
+
+html.dark .prose-content,
+html.dark .prose-content p {
+    color: var(--site-text-secondary);
+}
+
+html.dark .prose-content a {
+    color: var(--site-link);
+}
+
+/* Components */
+html.dark .menu-category-pill {
+    background: var(--site-bg-card);
+    color: var(--site-text-secondary);
+    border-color: var(--site-border);
+}
+
+html.dark .menu-category-pill:hover {
+    border-color: rgba(249, 115, 22, 0.4);
+    color: #fff;
+}
+
+html.dark .menu-category-pill--active {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.35);
+}
+
+html.dark .menu-category-nav {
+    background: rgba(9, 9, 11, 0.92) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--site-border-soft);
+}
+
+html.dark .menu-card {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+}
+
+html.dark .menu-card:hover {
+    border-color: rgba(249, 115, 22, 0.2);
+}
+
+html.dark .form-card {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+    box-shadow: var(--site-shadow-md);
+}
+
+html.dark .form-input {
+    background: var(--site-input-bg);
+    border-color: var(--site-input-border);
+    color: var(--site-text);
+}
+
+html.dark .form-input:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+html.dark .btn-outline {
+    border-color: var(--site-border);
+    color: var(--site-link);
+}
+
+html.dark .btn-outline:hover {
+    background: rgba(249, 115, 22, 0.12);
+    border-color: #f97316;
+    color: #fff;
+}
+
+html.dark .rounded-2xl.border.bg-stone-50,
+html.dark article.rounded-2xl {
+    background-color: var(--site-bg-card) !important;
+    border-color: var(--site-border) !important;
+}
+
+html.dark .inline-flex.rounded-full.bg-brand-700,
+html.dark .bg-brand-700.text-white {
+    box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
+}
+
+html.dark .border-2.border-brand-700 {
+    border-color: #f97316 !important;
+    color: var(--site-link) !important;
+}
+
+html.dark .border-2.border-brand-700:hover {
+    background: #ea580c !important;
+    color: #fff !important;
+}
+
+/* Nav dropdown (dark mode polish) */
+html.dark .site-nav-dropdown-menu {
+    background: rgba(20, 20, 24, 0.98);
+    border-color: var(--site-border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+html.dark .site-mobile-panel-inner {
+    background: rgba(20, 20, 24, 0.98);
+    border-color: var(--site-border);
+}
+
+/* Footer — already dark; subtle lift */
+html.dark .site-footer {
+    background: linear-gradient(180deg, #0c0a09 0%, #050506 100%);
+    border-top: 1px solid var(--site-border);
+}
+
+html.dark .site-footer-glow {
+    opacity: 0.6;
+}
+
+/* Contact page */
+html.dark .contact-page {
+    background: var(--site-bg);
+}
+
+html.dark .contact-form-wrap {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+    box-shadow: var(--site-shadow-md);
+}
+
+html.dark .contact-field-input {
+    color: var(--site-text);
+    border-bottom-color: var(--site-border);
+}
+
+html.dark .contact-field label {
+    color: var(--site-text-muted);
+}
+
+html.dark .contact-social-btn {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+    color: var(--site-link);
+}
+
+html.dark .contact-social-btn:hover {
+    background: #ea580c;
+    color: #fff;
+}
+
+html.dark .contact-aside-card--whatsapp {
+    background: #14532d;
+    border-color: #166534;
+}
+
+html.dark .contact-aside-card--whatsapp .contact-aside-title {
+    color: #f0fdf4;
+}
+
+html.dark .contact-aside-card--whatsapp .contact-aside-text {
+    color: #bbf7d0;
+}
+
+html.dark .contact-aside-tag {
+    background: #166534;
+    color: #dcfce7;
+}
+
+html.dark .contact-form-wrap--enhanced {
+    background: var(--site-bg-card);
+    border-top-color: #ea580c;
+}
+
+html.dark .contact-form-head {
+    border-bottom-color: var(--site-border);
+}
+
+html.dark .contact-form-head-title {
+    color: var(--site-text);
+}
+
+html.dark .contact-field-select {
+    color: var(--site-text);
+    border-bottom-color: var(--site-border);
+}
+
+/* Experience pages (About, Menu, Gallery) */
+html.dark .xp-page {
+    background: var(--site-bg);
+}
+
+html.dark .xp-stat-card,
+html.dark .xp-content-card,
+html.dark .xp-value-card,
+html.dark .xp-menu-item,
+html.dark .xp-empty {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+}
+
+html.dark .xp-stat-card-label,
+html.dark .xp-section-desc {
+    color: var(--site-text-muted);
+}
+
+html.dark .xp-section-title,
+html.dark .xp-content-card-title,
+html.dark .xp-menu-category-title,
+html.dark .xp-menu-item-name {
+    color: var(--site-text);
+}
+
+html.dark .xp-menu-nav {
+    background: rgba(12, 10, 9, 0.92);
+    border-color: var(--site-border);
+}
+
+html.dark .xp-filter-pill {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+    color: var(--site-text-muted);
+}
+
+html.dark .xp-filter-pill--active,
+html.dark .xp-filter-pill:hover {
+    background: #ea580c;
+    color: #fff;
+    border-color: #ea580c;
+}
+
+html.dark .contact-map-frame {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.35), rgba(255, 255, 255, 0.05), rgba(249, 115, 22, 0.2));
+}
+
+/* Home hero — slightly richer overlay in dark preference */
+html.dark .home-hero-overlay {
+    background:
+        linear-gradient(105deg, rgba(5, 5, 6, 0.94) 0%, rgba(5, 5, 6, 0.78) 42%, rgba(5, 5, 6, 0.4) 68%, rgba(5, 5, 6, 0.55) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, transparent 35%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+html.dark .hero-promo-badge {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Scrollbar (webkit) */
+html.dark ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+    background: #09090b;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 5px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #52525b;
+}
+
+/* Selection */
+html.dark ::selection {
+    background: rgba(249, 115, 22, 0.35);
+    color: #fff;
+}
+
+/* ========== Contact page (full) ========== */
+html.dark .contact-card {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+    box-shadow: var(--site-shadow-sm);
+}
+
+html.dark .contact-card:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    box-shadow: var(--site-shadow-md);
+}
+
+html.dark .contact-card--static {
+    background: var(--site-bg-card);
+}
+
+html.dark .contact-card-title {
+    color: var(--site-text-muted);
+}
+
+html.dark .contact-card-value {
+    color: var(--site-text);
+}
+
+html.dark .contact-card-link {
+    color: var(--site-link-hover);
+}
+
+html.dark .contact-card-icon {
+    background: var(--site-bg-accent-soft);
+    color: #f97316;
+}
+
+html.dark .contact-card:hover .contact-card-icon {
+    background: #ea580c;
+    color: #fff;
+}
+
+html.dark .contact-card-icon--whatsapp {
+    background: rgba(22, 163, 74, 0.2);
+    color: #4ade80;
+}
+
+html.dark .contact-card--whatsapp:hover .contact-card-icon--whatsapp {
+    background: #16a34a;
+    color: #fff;
+}
+
+html.dark .contact-main,
+html.dark .contact-cards-section {
+    background-color: transparent;
+}
+
+html.dark .contact-section-eyebrow--light,
+html.dark .contact-form-head-desc,
+html.dark .contact-form-note {
+    color: var(--site-text-muted);
+}
+
+html.dark .contact-aside-card--dark {
+    background: linear-gradient(145deg, #141418 0%, #1c1c21 100%);
+    border-color: var(--site-border);
+}
+
+html.dark .contact-hours-table--aside th {
+    color: var(--site-text-muted);
+}
+
+html.dark .contact-hours-table--aside td {
+    color: var(--site-text);
+}
+
+html.dark .contact-find-section {
+    background: #0c0a09;
+}
+
+html.dark .contact-find-bg {
+    background:
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(249, 115, 22, 0.08), transparent),
+        linear-gradient(180deg, #1c1917 0%, #09090b 100%);
+}
+
+html.dark .contact-map-open-btn,
+html.dark .contact-find-btn--maps {
+    background: var(--site-bg-elevated);
+    color: var(--site-text);
+}
+
+html.dark .contact-map-open-btn:hover,
+html.dark .contact-find-btn--maps:hover {
+    background: #27272a;
+}
+
+html.dark .contact-map-placeholder {
+    background: #18181c;
+    border-color: var(--site-border);
+}
+
+html.dark .contact-success-state .font-display,
+html.dark .contact-success-state p {
+    color: var(--site-text-secondary);
+}
+
+html.dark .contact-success-icon {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+}
+
+html.dark .contact-shake.bg-red-50,
+html.dark .rounded-xl.bg-red-50 {
+    background: rgba(127, 29, 29, 0.35) !important;
+    border-color: rgba(248, 113, 113, 0.25) !important;
+    color: #fecaca !important;
+}
+
+html.dark .contact-panel {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .contact-field-input:focus + label,
+html.dark .contact-field-input:not(:placeholder-shown) + label {
+    color: #fb923c;
+}
+
+html.dark .contact-field-input:focus ~ .contact-field-line {
+    background: #f97316;
+}
+
+/* ========== Experience pages (full) ========== */
+html.dark .xp-section--white {
+    background-color: var(--site-bg-elevated) !important;
+}
+
+html.dark .xp-section--light {
+    background-color: var(--site-bg-muted) !important;
+}
+
+html.dark .xp-stat-card-value {
+    color: #fb923c;
+}
+
+html.dark .xp-stat-card:hover {
+    border-color: rgba(249, 115, 22, 0.25);
+}
+
+html.dark .xp-content-card--accent {
+    background: var(--site-bg-accent-soft);
+    border-color: rgba(251, 146, 60, 0.2);
+}
+
+html.dark .xp-value-card h3.text-brand-900 {
+    color: var(--site-heading-display) !important;
+}
+
+html.dark .xp-value-card .text-stone-600 {
+    color: var(--site-text-muted) !important;
+}
+
+html.dark .xp-value-icon {
+    background: rgba(251, 146, 60, 0.15);
+    color: #fb923c;
+}
+
+html.dark .xp-menu-item {
+    box-shadow: var(--site-shadow-sm);
+}
+
+html.dark .xp-menu-item:hover {
+    border-color: rgba(249, 115, 22, 0.25);
+}
+
+html.dark .xp-menu-item--featured {
+    border-color: rgba(251, 146, 60, 0.35);
+    box-shadow: 0 8px 28px rgba(249, 115, 22, 0.15);
+}
+
+html.dark .xp-menu-item-price {
+    color: #fb923c;
+}
+
+html.dark .xp-menu-item-badge {
+    background: rgba(251, 146, 60, 0.2);
+    color: #fdba74;
+}
+
+html.dark .xp-menu-item-img {
+    background: #27272a;
+}
+
+html.dark .xp-menu-category-head {
+    border-bottom-color: var(--site-border);
+}
+
+html.dark .xp-media-frame {
+    border-color: var(--site-border);
+    box-shadow: var(--site-shadow-md);
+}
+
+html.dark .xp-gallery-card {
+    background: #27272a;
+    box-shadow: var(--site-shadow-sm);
+}
+
+html.dark .xp-empty {
+    border-color: var(--site-border);
+    color: var(--site-text-muted);
+}
+
+html.dark .xp-cta-band {
+    background: linear-gradient(135deg, #1c1917 0%, #292524 40%, #09090b 100%);
+}
+
+/* Page banner (reservations, etc.) */
+html.dark .page-banner-overlay {
+    background:
+        linear-gradient(105deg, rgba(5, 5, 6, 0.92) 0%, rgba(5, 5, 6, 0.75) 100%),
+        linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+html.dark .info-card {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+}
+
+/* Accent text stays readable */
+html.dark .text-accent {
+    color: #fb923c !important;
+}
+
+html.dark a.text-accent:hover {
+    color: #fdba74 !important;
+}
+
+/* Lightbox */
+html.dark #lightbox.active {
+    background: rgba(0, 0, 0, 0.94);
+}
+
+html.dark .xp-hero-showcase-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+html.dark .xp-hero-showcase-img-wrap {
+    background: linear-gradient(180deg, rgba(249, 115, 22, 0.12) 0%, rgba(9, 9, 11, 0.6) 100%);
+}
+
+html.dark .xp-hero-showcase--plain .xp-hero-showcase-img-wrap {
+    background: transparent;
+}
+
+html.dark .site-stat-card {
+    background: var(--site-bg-card);
+    border-color: var(--site-border);
+}
+
+html.dark .site-stat-card-value {
+    color: #fdba74;
+}
+
+html.dark .site-stat-card-label {
+    color: var(--site-text-muted);
+}
+
+html.dark .site-section-title {
+    color: var(--site-heading-display);
+}
+
+html.dark .site-section-desc {
+    color: var(--site-text-secondary);
+}
+
+html.dark .xp-hero-showcase-caption {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+html.dark .gallery-page .xp-gallery-filters {
+    background: rgba(15, 15, 18, 0.92);
+    border-color: var(--site-border);
+}

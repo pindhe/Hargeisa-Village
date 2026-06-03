@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /Village/
+
+# Protect sensitive directories
+RewriteRule ^(config|includes|database)/ - [F,L]
+
+# Optional clean URLs (fallback: use .php files directly)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^menu/?$ menu.php [L,QSA]
+RewriteRule ^reservations/?$ reservations.php [L,QSA]
+RewriteRule ^about/?$ about.php [L,QSA]
+RewriteRule ^gallery/?$ gallery.php [L,QSA]
+RewriteRule ^contact/?$ contact.php [L,QSA]

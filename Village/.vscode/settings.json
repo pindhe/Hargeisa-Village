@@ -1,0 +1,13 @@
+{
+  "remote.autoForwardPorts": false,
+  "remote.portsAttributes": {
+    "8081": {
+      "label": "Java API (not Village PHP)",
+      "onAutoForward": "ignore"
+    },
+    "80": {
+      "label": "XAMPP Apache — Village site",
+      "onAutoForward": "notify"
+    }
+  }
+}
